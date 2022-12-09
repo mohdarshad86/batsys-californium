@@ -14,11 +14,11 @@ router.get("/test-me", function (req, res) {
   logg.welcome();
 
   //p2
-  helper.myDate();
-  helper.myMonth();
-  helper.myBatch();
+  helper.printDate();
+  helper.printMonth();
+  helper.getBatchInfo();
 
-  //p3
+//   //p3
   formatt.trim();
   formatt.changetoLowerCase();
   formatt.changeToUpperCase();
@@ -42,19 +42,19 @@ router.get("/test-me", function (req, res) {
   console.log(lodash.chunk(monthName, 3));
 
   //(ii)
-  const nums = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-  console.log(lodash.tail(nums));
+  const oddNums = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+  console.log(lodash.tail(oddNums));
 
   // (iii)
   const arr1 = [1, 2, 3];
   const arr2 = [2, 3, 4];
-  const arr3 = [3, 4, 5];
-  const arr4 = [4, 5, 6];
-  const arr5 = [5, 6, 7];
+  const arr3 = [3, 8, 5];
+  const arr4 = [4, 11, 6];
+  const arr5 = [5, 123, 7];
 
   console.log(lodash.union(arr1, arr2, arr3, arr4, arr5));
 
-  // (iv)
+//   // (iv)
   const movies = [
     ["horror", "The Shining"],
     ["drama", "Titanic"],

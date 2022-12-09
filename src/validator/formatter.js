@@ -1,12 +1,12 @@
 const trimed = function () {
-  console.log("functionUp  ".trim());
+  console.log("functionUp    ".trim());
 };
 
 const lowerCase = function () {
-  console.log("FunctionUp".toLowerCase());
+  console.log("FunCTionUp".toLowerCase());
 };
 const upperCase = function () {
-  console.log("FunctionUp".toUpperCase());
+  console.log("functionUp".toUpperCase());
 };
 
 module.exports.trim = trimed;
