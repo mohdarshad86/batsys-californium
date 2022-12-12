@@ -12,7 +12,7 @@ router.get("/movies", function (req, res) {
     "Zack Snyder's Justice League",
   ];
 
-  res.json(movies);
+  res.send(movies);
 });
 
 //p2
@@ -30,9 +30,9 @@ router.get("/movies/:indexNumber", function (req, res) {
 
   //p3
   if (i > 0 && i < movies.length) {
-    res.json(movies[i]);
+    res.send(movies[i]);
   } else {
-    res.json("Index is not defined, use a valid index");
+    res.send("Index is not defined, use a valid index");
   }
 });
 //p4
@@ -56,7 +56,7 @@ router.get("/films", function (req, res) {
     },
   ];
 
-  res.json(films);
+  res.send(films);
 });
 
 //p5
@@ -81,9 +81,9 @@ router.get("/films/:filmId", function (req, res) {
     },
   ];
 
-  let film = films.find((movie) => movie.id == index);
+  let film = films.find((x) => x.id == index);
   if (film) {
-    res.json(film);
+    res.send(film);
   } else {
     res.send("No movie exists with this id");
   }
