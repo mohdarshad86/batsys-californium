@@ -26,18 +26,18 @@ router.get("/movies/:indexNumber", function (req, res) {
     "Wonder Women",
     "Zack Snyder's Justice League",
   ];
-  // res.json(movies[i]);
+  res.send(movies[i]);
 
   //p3
-  // if (i > 0 && i < movies.length) {
-  //   res.json(movies[i]);
-  // } else {
-  //   res.json("Index is not defined, use a valid index");
-  // }
+  if (i > 0 && i < movies.length) {
+    res.json(movies[i]);
+  } else {
+    res.json("Index is not defined, use a valid index");
+  }
 });
 //p4
 router.get("/films", function (req, res) {
-  const film = [
+  const films = [
     {
       id: 1,
       name: "The Shining",
@@ -56,7 +56,7 @@ router.get("/films", function (req, res) {
     },
   ];
 
-  res.json(film);
+  res.json(films);
 });
 
 //p5
