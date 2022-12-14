@@ -116,11 +116,11 @@ router.post("/voting", function (req, res) {
 
   let result = persons.filter((pers) => pers.age > validAge);
 
-  for (let i = 0; i < result.length; i++) {
-    result[i].votingStatus = true;
-  }
+  // for (let i = 0; i < result.length; i++) {
+  //   result[i].votingStatus = true;
+  // }
 
-  // result.forEach((ele) => (ele.votingStatus = true));
+  result.forEach((ele) => (ele.votingStatus = true));
 
   res.send(result);
 });
