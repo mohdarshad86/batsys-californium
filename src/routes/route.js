@@ -11,7 +11,7 @@ router.get("/test-me", function (req, res) {
 router.post("/createUser", UserController.createUser);
 router.get("/getUsersData", UserController.getUsersData);
 
-router.get("/getBooks", bookController.getBooks);
+router.get("/getBooksData", bookController.getBooksData);
 router.post("/createBooks", bookController.createBooks);
 
 router.use("/", practice);
