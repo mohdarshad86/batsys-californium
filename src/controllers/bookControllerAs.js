@@ -42,7 +42,7 @@ const getParticularBooks = async function (req, res) {
 // “200INR” or “500INR
 const getXINRBooks = async function (req, res) {
   let allBooksAs = await bookModelAs.find({
-    "price.EURO": { $in: [12, 13, 21] },
+    "price.INR": { $in: [12, 13, 21] },
   });
   res.send({ msg: allBooksAs });
 };
