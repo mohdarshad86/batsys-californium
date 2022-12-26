@@ -24,7 +24,7 @@ const createOrder = async function (req, res) {
   if (order.isFreeAppUser === "true") {
     order.amount = 0;
   } else {
-    await newUser.findOneAndUpdate(
+    await newUser.findByIdAndUpdate(
       { _id: order.userId },
       { $inc: { balance: -1 * productDetails.price } }
     );
