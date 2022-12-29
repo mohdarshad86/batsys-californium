@@ -13,4 +13,5 @@ router.get("/users/:userId", jwtMiddleware, userController.getUserData);
 router.put("/users/:userId", jwtMiddleware, userController.updateUser);
 
 router.delete("/users/:userId", jwtMiddleware, userController.deleteUser);
+
 module.exports = router;
